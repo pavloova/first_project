@@ -27,6 +27,22 @@ elif pl=='Home':
         print('NO')
 else:
     print("wrong")
+print('----TASk3----')    
+n= int(input())
+max=[]
+cnt=[]
+for i in range (n):
+  max.append(int(input()))
+  cnt.append(0)
+k=int(input())
+for i in range (k):
+  read=int(input())
+  cnt[read-1]+=1
+for i in range (n):
+  if cnt[i]>max[i]:
+    print('YES')
+  else:
+    print('NO')
     
 print('----TASk4----')
 a=[int(i) for i in input().split()]
@@ -48,20 +64,11 @@ print (time)
 print('----TASk6----')
 print('введите A B C T')
 a=[int(i) for i in input().split()]
-print(30*((a[3]-a[0])*a[2] + a[0]*a[1]))'''
+if a[3]>a[0]:
+    print(30*((a[3]-a[0])*a[2] + a[0]*a[1]))
+else:
+    print(a[3]*a[1])
+    '''
 
-def count(n, clicks, max):
-    clickCount = [0] * n
-    for i in clicks:
-        clickCount[i - 1]+=1
-    for i in range(n):
-        if max[i] < clickCount[i]:
-            print('YES')
-        else:
-            print('NO')
-n = int(input())
-max = [int(i) for i in input().split()]
-#k= int(input())
-clicks = [int(i) for i in input().split()]
-count(n, clicks, max)
+
 
